@@ -1,0 +1,65 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "订单",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#fff"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#ffd100",
+		"backgroundColor": "#ffd100"
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "black",
+		"backgroundColor": "#fff",
+		"borderStyle": "white",
+		"desc": "uniapp iconfont不支持小程序",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/image/tabs/shouye-zhihui.png",
+				"selectedIconPath": "static/image/tabs/shouye-jihuo.png"
+			},
+			{
+				"text": "订单",
+				"pagePath": "pages/order/order",
+				"iconPath": "static/image/tabs/dingdan-zhihui.png",
+				"selectedIconPath": "static/image/tabs/dingdan-jihuo.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/my/my",
+				"iconPath": "static/image/tabs/gerenzhongxin-zhihui.png",
+				"selectedIconPath": "static/image/tabs/gerenzhongxin-jihuo.png"
+			}
+		]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"desc": "icons微信小程序无法显示，排除easycom，复制nodemodules的uni-cons到components",
+			"^uni-((?!(shadow-root|icons)).*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	}
+}
