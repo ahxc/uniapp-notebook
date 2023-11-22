@@ -1,0 +1,53 @@
+@import '../../../style/common.less';
+
+
+// 首页基础色
+.nav-bar {
+    background-color: @theme-color;
+}
+
+// 滚动切换后样式
+.nav-bar-translate {
+    .nav-bar();
+    background-color: white;
+}
+
+.search-bar {
+    background-color: black;
+
+    uni-search-bar {
+        height: 100px;
+
+        .uni-searchbar {
+            padding: 5px 10px !important;
+
+            .uni-searchbar__box {
+                height: 25px;
+                display: flex;
+                justify-content: left;
+            }
+
+            & ::v-deep .searchbar__cancel {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.search-bar-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 0 8px;
+
+    uni-tag {
+        padding: 0 2px;
+
+        // 下标签需要穿透。
+        & ::v-deep text {
+            border: 0px;
+            color: black;
+            background-color: @gray-color;
+        }
+    }
+}
